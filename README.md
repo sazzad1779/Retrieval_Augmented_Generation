@@ -7,6 +7,7 @@ RAG (Retrieval-Augmented Generation) is a hybrid model that combines two key com
 
 - Information retrieval (fetching relevant documents or passages from a large dataset)
 - Text generation (using a language model to generate coherent responses).
+  
 The key idea behind RAG is to improve the accuracy and relevance of language models by allowing them to retrieve supporting information during inference, instead of relying solely on the data seen during training. This is especially helpful for answering questions that require up-to-date or domain-specific knowledge.
 
 ##### Example:
