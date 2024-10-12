@@ -3,6 +3,7 @@
 [বাংলা সংস্করণ পড়ুন](./README.bn.md)
 
 ### What is RAG (Retrieval-Augmented Generation)?
+```
 RAG (Retrieval-Augmented Generation) is a hybrid model that combines two key components:
 
 - Information retrieval (fetching relevant documents or passages from a large dataset)
@@ -16,8 +17,9 @@ Imagine you ask a RAG-based model, “What are the latest trends in AI?”
 1. The model first retrieves documents or paragraphs related to recent AI trends from a knowledge base (e.g., a collection of news articles or research papers).
 2. Then, it generates a response by summarizing the retrieved documents in the context of your query.
 
-
+```
 ### Why was RAG introduced? Why do we need it?
+```
 RAG was introduced to solve the limitations of traditional language models like GPT, BERT, or BART, which generate responses purely based on what they have seen during training. These models are often:
 
 - Static: They cannot access new or unseen information, which limits their ability to generate answers about events that happened after their training.
@@ -29,7 +31,7 @@ RAG comes to address these issues by augmenting the generation process with *ext
 - This helps the model generate more accurate, informative, and contextually relevant answers.
 ##### Example:
 Traditional models like GPT-3 might struggle to answer, “Who won the 2024 Olympic Games?” if they were trained before that year. However, a RAG model can retrieve relevant information about the 2024 Olympics from a knowledge base and then generate a correct response.
-
+```
 
 
 ![Rag diagram](assets/Diagram.png)
