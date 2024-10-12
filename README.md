@@ -35,3 +35,23 @@ To create a detailed explanation document based on your diagram for RAG (Retriev
 
 
 ![Rag diagram](assets/Diagram.png)
+
+### 1. Data Ingestion
+This phase involves processing and preparing the data so that it can be efficiently retrieved when needed.
+
+#### Breakdown:
+- Sources:
+
+- - The origin of the raw data. It could be a large dataset, documents, web pages, or any other form of unstructured data that the model will use.
+- - For example, text documents from Wikipedia, articles, or any domain-specific data.
+- Extract Context:
+
+- - The data is broken down into chunks for easier processing and to facilitate better context retrieval later. Each chunk represents a meaningful portion of the source data (such as a paragraph or section from a document).
+Example: Splitting a long article into smaller segments or chunks, each containing sufficient context.
+Embedding:
+
+Once the data is chunked, each chunk is passed through an embedding model that converts it into a fixed-length vector representation. These embeddings capture the semantic meaning of the text and allow for efficient comparison during retrieval.
+A pre-trained model like Sentence-BERT, FAISS, or DPR (Dense Passage Retrieval) can be used here to generate the embeddings.
+Knowledge Base / Semantic Index:
+
+The embeddings of all chunks are stored in a semantic index (like FAISS, ElasticSearch, or HNSW). This index allows for efficient similarity search when the retrieval model queries it. The chunks and their embeddings are now stored in a knowledge base that the RAG model can access later.
