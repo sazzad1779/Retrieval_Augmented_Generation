@@ -47,11 +47,11 @@ This phase involves processing and preparing the data so that it can be efficien
 - Extract Context:
 
   - The data is broken down into chunks for easier processing and to facilitate better context retrieval later. Each chunk represents a meaningful portion of the source data (such as a paragraph or section from a document).
-Example: Splitting a long article into smaller segments or chunks, each containing sufficient context.
-Embedding:
+  - Example: Splitting a long article into smaller segments or chunks, each containing sufficient context.
+#### Embedding:
 
-Once the data is chunked, each chunk is passed through an embedding model that converts it into a fixed-length vector representation. These embeddings capture the semantic meaning of the text and allow for efficient comparison during retrieval.
-A pre-trained model like Sentence-BERT, FAISS, or DPR (Dense Passage Retrieval) can be used here to generate the embeddings.
-Knowledge Base / Semantic Index:
+- Once the data is chunked, each chunk is passed through an embedding model that converts it into a fixed-length vector representation. These embeddings capture the semantic meaning of the text and allow for efficient comparison during retrieval.
+- A pre-trained model like Sentence-BERT, FAISS, or DPR (Dense Passage Retrieval) can be used here to generate the embeddings.
+#### Knowledge Base / Semantic Index:
 
-The embeddings of all chunks are stored in a semantic index (like FAISS, ElasticSearch, or HNSW). This index allows for efficient similarity search when the retrieval model queries it. The chunks and their embeddings are now stored in a knowledge base that the RAG model can access later.
+- The embeddings of all chunks are stored in a semantic index (like FAISS, ElasticSearch, or HNSW). This index allows for efficient similarity search when the retrieval model queries it. The chunks and their embeddings are now stored in a knowledge base that the RAG model can access later.
