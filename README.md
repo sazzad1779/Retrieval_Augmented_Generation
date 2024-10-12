@@ -46,8 +46,8 @@ This phase involves processing and preparing the data so that it can be efficien
   - For example, text documents from Wikipedia, articles, or any domain-specific data.
 
 - Extract Context:
-    -Extract the relevent information from different sources.
-    
+    - Extract the relevent information from different sources.
+
 - chunk Creation:
 
   - The data is broken down into chunks for easier processing and to facilitate better context retrieval later. Each chunk represents a meaningful portion of the source data (such as a paragraph or section from a document).
@@ -59,3 +59,23 @@ This phase involves processing and preparing the data so that it can be efficien
 - Knowledge Base / Semantic Index:
 
   - The embeddings of all chunks are stored in a semantic index (like FAISS, ElasticSearch, or HNSW). This index allows for efficient similarity search when the retrieval model queries it. The chunks and their embeddings are now stored in a knowledge base that the RAG model can access later.
+
+### 2. Data Retrieval
+This phase deals with querying the indexed data to retrieve the most relevant chunks based on a user's input query.
+
+#### Breakdown:
+- Query:
+  - A user inputs a query, which is then passed through an embedding model to generate a query embedding. This embedding will later be compared to the stored chunk embeddings to retrieve relevant data.
+- Chunk:
+  - The query is compared against the indexed chunk embeddings. This is done by calculating the similarity (typically cosine similarity) between the query embedding and the chunk embeddings stored in the knowledge base.
+- Semantic Search:
+  - Based on the similarity scores, the system retrieves the most relevant chunks. This step ensures that only the chunks most relevant to the user's query are fetched, providing context for the generation model.
+  - Efficient tools like FAISS or ElasticSearch perform this search to quickly retrieve the top-N results.
+### 3. Response Generation
+The final phase involves generating the response based on the query and the retrieved relevant chunks.
+
+#### Breakdown:
+- LLM Generation:
+  - The relevant chunks retrieved in the previous phase are combined with the original query. The entire context (query + chunks) is then passed to a large language model (LLM) like BART, GPT, or T5, which generates a coherent and contextually accurate response based on the input.
+- Ranked Result:
+  - The response is generated and ranked based on relevance and fluency. In some implementations, multiple generated results can be ranked, and the most relevant response is returned to the user.
