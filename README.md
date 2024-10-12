@@ -31,7 +31,7 @@ Traditional models like GPT-3 might struggle to answer, “Who won the 2024 Olym
 
 
 ## Architecture
-To create a detailed explanation document based on your diagram for RAG (Retrieval-Augmented Generation), we can follow the three main sections you defined: Data Ingestion, Data Retrieval, and Response Generation. 
+To create a detailed explanation document based on diagram for RAG (Retrieval-Augmented Generation), we can follow the three main sections  defined: Data Ingestion, Data Retrieval, and Response Generation. 
 
 
 ![Rag diagram](assets/Diagram.png)
