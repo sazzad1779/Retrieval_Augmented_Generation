@@ -42,11 +42,11 @@ This phase involves processing and preparing the data so that it can be efficien
 #### Breakdown:
 - Sources:
 
-- - The origin of the raw data. It could be a large dataset, documents, web pages, or any other form of unstructured data that the model will use.
-- - For example, text documents from Wikipedia, articles, or any domain-specific data.
+  - The origin of the raw data. It could be a large dataset, documents, web pages, or any other form of unstructured data that the model will use.
+  - For example, text documents from Wikipedia, articles, or any domain-specific data.
 - Extract Context:
 
-- - The data is broken down into chunks for easier processing and to facilitate better context retrieval later. Each chunk represents a meaningful portion of the source data (such as a paragraph or section from a document).
+  - The data is broken down into chunks for easier processing and to facilitate better context retrieval later. Each chunk represents a meaningful portion of the source data (such as a paragraph or section from a document).
 Example: Splitting a long article into smaller segments or chunks, each containing sufficient context.
 Embedding:
 
