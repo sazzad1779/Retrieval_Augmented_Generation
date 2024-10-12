@@ -31,5 +31,5 @@ RAG comes to address these issues by augmenting the generation process with *ext
 Traditional models like GPT-3 might struggle to answer, “Who won the 2024 Olympic Games?” if they were trained before that year. However, a RAG model can retrieve relevant information about the 2024 Olympics from a knowledge base and then generate a correct response.
 
 
-
+Link to the sample section: [Link Text](#####Example).
 ![Rag diagram](assets/Diagram.png)
